@@ -1,0 +1,63 @@
+<head>
+    
+    <link rel="stylesheet" href="style.css">
+</style>
+</head>
+<body>
+    <div class='header'>
+        <h1>My Library</h1>
+    </div>
+    <div class='addbookform'>
+        <form >
+            <!-- <input type="text" id='bookcover' placeholder="Cover Image Link"> -->
+            <input type="text" id='bookname' placeholder="Title">
+            <input type="text" id='bookauthor' placeholder="Author">
+            <input type="number" id='bookpages'placeholder="Page Count">
+            <label for="checkread">Read</label>
+            <input type="checkbox" id='bookread'>
+            <input type="button" onclick="addBookToLibrary()" value="Add">
+        </form>
+    </div>
+    <div class="content">
+
+        <div class='bookTile' id ='templatetile'>
+            <!-- <div class='cover'>
+            </div> -->
+            <!-- <div class='bookinfo'>
+               <div class='tap'>Ikigai, Hector Garcia,208 pages</div>
+                <div class='readstatus'>Read</div> 
+            </div> -->
+        </div>
+    
+    </div>
+
+    <div class='savebuttons'>
+    <button  id='savecloud' onclick="savecloud()">Save in Cloud</button>
+    <button  id='loaddevice' onclick="loadfromcloud()">Load from Cloud</button>
+    <button  id='savecloud' onclick="savelocal()">Save on Device</button>
+    <button  id='loaddevice' onclick="loadlocal()">Load from Device </button>
+    </div>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-database.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyArVt1m-_pxjFJyAHK3wRfoASLW5gSi3FI",
+    authDomain: "mylib2-a6c02.firebaseapp.com",
+    projectId: "mylib2-a6c02",
+    storageBucket: "mylib2-a6c02.appspot.com",
+    messagingSenderId: "1042872696924",
+    appId: "1:1042872696924:web:cb413169204ec682f6e699"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+
+    <script src="script.js"></script>
+</body>
